@@ -35,14 +35,14 @@ const Index = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button 
-              size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 shadow-glow"
-              onClick={scrollToCTA}
-            >
-              QUERO MEU GUIA BLACK FRIDAY
-              <Sparkles className="ml-2" />
-            </Button>
+          <Button 
+            size="lg" 
+            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 shadow-glow"
+            onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
+          >
+            QUERO MEU GUIA BLACK FRIDAY
+            <Sparkles className="ml-2" />
+          </Button>
             <Button 
               size="lg" 
               variant="outline" 
@@ -179,18 +179,18 @@ const Index = () => {
               <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-primary">3</span>
               </div>
-              <h3 className="text-2xl font-bold mb-3">Edição e Pós-Produção</h3>
+              <h3 className="text-2xl font-bold mb-3">Consistência de Personagem no Sora 2</h3>
               <p className="text-muted-foreground mb-4">
-                Transforme vídeos gerados por IA em conteúdo profissional com técnicas avançadas de edição.
+                Técnica exclusiva desenvolvida por mim, o único no Brasil que domina este método para inserir você ou pessoas famosas nos vídeos.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-accent" />
-                  <span className="text-sm">Ferramentas de edição recomendadas</span>
+                  <span className="text-sm">Coloque-se dentro dos vídeos com realismo</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-accent" />
-                  <span className="text-sm">Fluxo de trabalho otimizado</span>
+                  <span className="text-sm">Adicione pessoas famosas aos seus conteúdos</span>
                 </li>
               </ul>
             </Card>
@@ -232,9 +232,9 @@ const Index = () => {
 
           <Card className="p-8 md:p-12 bg-card border-primary/30 shadow-glow">
             <div className="text-center mb-8">
-              <div className="text-muted-foreground line-through text-2xl mb-2">De R$ 497,00</div>
-              <div className="text-5xl md:text-6xl font-bold text-accent mb-2">12x R$ 9,70</div>
-              <div className="text-xl text-muted-foreground">ou R$ 97,00 à vista</div>
+              <div className="text-muted-foreground line-through text-2xl mb-2">De R$ 59,90</div>
+              <div className="text-5xl md:text-6xl font-bold text-accent mb-2">R$ 29,90</div>
+              <div className="text-xl text-primary font-semibold">50% OFF - Black Friday</div>
             </div>
 
             <div className="space-y-4 mb-8">
@@ -263,6 +263,7 @@ const Index = () => {
             <Button 
               size="lg" 
               className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-xl py-8 shadow-glow"
+              onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
             >
               GARANTIR MINHA VAGA AGORA
               <Sparkles className="ml-2" />
@@ -350,7 +351,7 @@ const Index = () => {
           <Button 
             size="lg" 
             className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-12 py-8 shadow-glow"
-            onClick={scrollToCTA}
+            onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
           >
             COMEÇAR AGORA
             <Sparkles className="ml-2" />
