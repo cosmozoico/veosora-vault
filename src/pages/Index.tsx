@@ -59,8 +59,8 @@ const Index = () => {
               <div className="text-sm text-muted-foreground">Visualizações</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">4</div>
-              <div className="text-sm text-muted-foreground">Módulos Completos</div>
+              <div className="text-3xl font-bold text-primary">11</div>
+              <div className="text-sm text-muted-foreground">E-books Completos</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">2</div>
@@ -240,7 +240,7 @@ const Index = () => {
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3">
                 <Check className="w-6 h-6 text-accent flex-shrink-0" />
-                <span>4 E-books Completos (Básico ao Avançado)</span>
+                <span>11 E-books Completos (Básico ao Avançado)</span>
               </div>
               <div className="flex items-center gap-3">
                 <Check className="w-6 h-6 text-accent flex-shrink-0" />
