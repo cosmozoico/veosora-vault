@@ -29,7 +29,7 @@ const Index = () => {
               </Badge>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Domine o Sora 2 e Veo 3 com <span className="text-primary">IA</span>
+                Domine o Sora 2 e Veo 3 por <span className="text-primary">preço de banana!</span> 😱
               </h1>
               
               <p className="text-base md:text-lg text-muted-foreground mb-6">
