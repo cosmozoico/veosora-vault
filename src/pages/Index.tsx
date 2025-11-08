@@ -60,7 +60,7 @@ const Index = () => {
                   <div className="text-xs text-muted-foreground">Visualizações</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-foreground">11</div>
+                  <div className="text-2xl font-bold text-foreground">8</div>
                   <div className="text-xs text-muted-foreground">E-books</div>
                 </div>
                 <div>
@@ -149,7 +149,7 @@ const Index = () => {
               O que você vai aprender
             </h2>
             <p className="text-muted-foreground">
-              11 E-books completos do básico ao avançado
+              8 E-books completos do básico ao avançado
             </p>
           </div>
 
@@ -162,9 +162,6 @@ const Index = () => {
               { icon: "✓", text: "Consistência de Personagem (Exclusivo)", color: "accent" },
               { icon: "✓", text: "Estratégia de Viralização 168M", color: "accent" },
               { icon: "✓", text: "Templates de Prompts Prontos", color: "primary" },
-              { icon: "✓", text: "Roteiros que Convertem", color: "primary" },
-              { icon: "✓", text: "Técnicas de Distribuição", color: "primary" },
-              { icon: "✓", text: "Análise de Casos Reais", color: "primary" },
               { icon: "✓", text: "Otimização para Redes Sociais", color: "primary" },
               { icon: "✓", text: "Monetização de Conteúdo", color: "accent" }
             ].map((item, i) => (
@@ -227,10 +224,9 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Right - Features */}
               <div className="space-y-3">
                 {[
-                  "11 E-books Completos",
+                  "8 E-books Completos",
                   "Estratégia dos 168M de Views",
                   "Técnica Exclusiva de Consistência",
                   "Templates de Prompts",
