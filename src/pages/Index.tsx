@@ -17,54 +17,68 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-32 px-4">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-background to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,hsl(258,90%,66%,0.1),transparent)]" />
-        
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <Badge className="mb-6 bg-accent text-accent-foreground hover:bg-accent/90 text-sm font-bold px-4 py-2">
-            ⚡ BLACK FRIDAY - OFERTA EXCLUSIVA
-          </Badge>
-          
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Domine <span className="text-primary">Veo 3 e Sora 2</span> e Crie Vídeos Ultra-Realistas Que <span className="text-accent">Viralizarão!</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl">
-            A Estratégia de <span className="text-primary font-bold">168 Milhões de Visualizações</span> Revelada. Do Básico ao Avançado.
-          </p>
+      <section className="relative overflow-hidden py-12 md:py-20 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="order-2 md:order-1">
+              <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 text-xs px-3 py-1">
+                ⚡ BLACK FRIDAY
+              </Badge>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Domine o Sora 2 e Veo 3 com <span className="text-primary">IA</span>
+              </h1>
+              
+              <p className="text-base md:text-lg text-muted-foreground mb-6">
+                Aprenda a criar vídeos ultra-realistas com as IAs mais avançadas do mercado. A mesma estratégia que gerou <span className="text-primary font-semibold">168 milhões de visualizações</span>.
+              </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 shadow-glow"
-            onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
-          >
-            QUERO MEU GUIA BLACK FRIDAY
-            <Sparkles className="ml-2" />
-          </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10"
-              onClick={scrollToCTA}
-            >
-              Ver Conteúdo Completo
-            </Button>
-          </div>
+              <div className="flex gap-3 mb-8">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 shadow-lg"
+                  onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
+                >
+                  Começar Agora
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-border hover:bg-secondary"
+                  onClick={scrollToCTA}
+                >
+                  Ver Mais
+                </Button>
+              </div>
 
-          <div className="flex flex-wrap gap-8 items-center justify-center md:justify-start">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">168M+</div>
-              <div className="text-sm text-muted-foreground">Visualizações</div>
+              <div className="flex gap-8">
+                <div>
+                  <div className="text-2xl font-bold text-foreground">168M+</div>
+                  <div className="text-xs text-muted-foreground">Visualizações</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-foreground">11</div>
+                  <div className="text-xs text-muted-foreground">E-books</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-foreground">100%</div>
+                  <div className="text-xs text-muted-foreground">Prático</div>
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">11</div>
-              <div className="text-sm text-muted-foreground">E-books Completos</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">2</div>
-              <div className="text-sm text-muted-foreground">IAs de Ponta</div>
+
+            {/* Right Image/Video */}
+            <div className="order-1 md:order-2 relative">
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 aspect-video flex items-center justify-center border border-primary/20">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(258,90%,66%,0.1),transparent)]" />
+                <Video className="w-24 h-24 text-primary/40" />
+              </div>
+              
+              {/* Decorative Icon - Top Right */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-accent/20 backdrop-blur-sm border border-accent/30 flex items-center justify-center">
+                <Sparkles className="w-8 h-8 text-accent" />
+              </div>
             </div>
           </div>
         </div>
@@ -123,171 +137,117 @@ const Index = () => {
       </section>
 
       {/* What You'll Receive */}
-      <section className="py-20 px-4">
+      <section className="py-16 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Tudo Que Você Vai <span className="text-primary">Receber</span>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">
+              O que você vai aprender
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Coleção Completa de E-books do Básico ao Avançado
+            <p className="text-muted-foreground">
+              11 E-books completos do básico ao avançado
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-8 bg-card hover:shadow-glow transition-all duration-300 border-border">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-primary">1</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Fundamentos de Vídeos com IA</h3>
-              <p className="text-muted-foreground mb-4">
-                Comece do zero e entenda como funcionam as principais ferramentas de criação de vídeos com Inteligência Artificial.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-accent" />
-                  <span className="text-sm">Introdução ao Veo 3 e Sora 2</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-accent" />
-                  <span className="text-sm">Primeiros passos práticos</span>
-                </li>
-              </ul>
-            </Card>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Module Cards */}
+            {[
+              { icon: "✓", text: "Fundamentos de Vídeos com IA", color: "primary" },
+              { icon: "✓", text: "Prompts Avançados para Veo 3", color: "primary" },
+              { icon: "✓", text: "Domínio Completo do Sora 2", color: "primary" },
+              { icon: "✓", text: "Consistência de Personagem (Exclusivo)", color: "accent" },
+              { icon: "✓", text: "Estratégia de Viralização 168M", color: "accent" },
+              { icon: "✓", text: "Templates de Prompts Prontos", color: "primary" },
+              { icon: "✓", text: "Roteiros que Convertem", color: "primary" },
+              { icon: "✓", text: "Técnicas de Distribuição", color: "primary" },
+              { icon: "✓", text: "Análise de Casos Reais", color: "primary" },
+              { icon: "✓", text: "Otimização para Redes Sociais", color: "primary" },
+              { icon: "✓", text: "Monetização de Conteúdo", color: "accent" }
+            ].map((item, i) => (
+              <Card key={i} className="p-4 bg-card border-border hover:border-primary/50 transition-colors">
+                <div className="flex items-center gap-3">
+                  <div className={`w-8 h-8 rounded-lg ${item.color === 'accent' ? 'bg-accent/20' : 'bg-primary/20'} flex items-center justify-center flex-shrink-0`}>
+                    <Check className={`w-5 h-5 ${item.color === 'accent' ? 'text-accent' : 'text-primary'}`} />
+                  </div>
+                  <span className="text-sm font-medium">{item.text}</span>
+                </div>
+              </Card>
+            ))}
+          </div>
 
-            <Card className="p-8 bg-card hover:shadow-glow transition-all duration-300 border-border">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-primary">2</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Prompts Avançados</h3>
-              <p className="text-muted-foreground mb-4">
-                Aprenda a criar prompts que geram vídeos ultra-realistas. Os mesmos usados para alcançar 168M de views.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-accent" />
-                  <span className="text-sm">Templates de prompts comprovados</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-accent" />
-                  <span className="text-sm">Técnicas de otimização</span>
-                </li>
-              </ul>
-            </Card>
-
-            <Card className="p-8 bg-card hover:shadow-glow transition-all duration-300 border-border">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-primary">3</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Consistência de Personagem no Sora 2</h3>
-              <p className="text-muted-foreground mb-4">
-                Técnica exclusiva desenvolvida por mim, o único no Brasil que domina este método para inserir você ou pessoas famosas nos vídeos.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-accent" />
-                  <span className="text-sm">Coloque-se dentro dos vídeos com realismo</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-accent" />
-                  <span className="text-sm">Adicione pessoas famosas aos seus conteúdos</span>
-                </li>
-              </ul>
-            </Card>
-
-            <Card className="p-8 bg-card hover:shadow-glow transition-all duration-300 border-border">
-              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
-                <Star className="w-6 h-6 text-accent fill-accent" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3">O Segredo da Viralização</h3>
-              <p className="text-muted-foreground mb-4">
-                A estratégia completa por trás das 168 milhões de visualizações. Roteiro, distribuição e otimização.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-accent" />
-                  <span className="text-sm">Caso de sucesso detalhado</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-accent" />
-                  <span className="text-sm">Estratégias de distribuição</span>
-                </li>
-              </ul>
-            </Card>
+          {/* Decorative Icon */}
+          <div className="mt-16 flex justify-center">
+            <div className="w-20 h-20 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/30 flex items-center justify-center">
+              <Star className="w-10 h-10 text-primary fill-primary/20" />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="cta-section" className="py-20 px-4 bg-gradient-to-b from-background via-primary/5 to-background">
-        <div className="container mx-auto max-w-4xl">
+      <section id="cta-section" className="py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-accent text-accent-foreground text-lg px-6 py-2">
+            <Badge className="mb-3 bg-accent/20 text-accent border-accent/30 text-sm px-4 py-1.5">
               🔥 OFERTA BLACK FRIDAY
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Oferta Exclusiva <span className="text-accent">Hoje</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2">
+              Garanta sua vaga hoje
             </h2>
+            <p className="text-muted-foreground text-sm">Oferta por tempo limitado</p>
           </div>
 
-          <Card className="p-8 md:p-12 bg-card border-primary/30 shadow-glow">
-            <div className="text-center mb-8">
-              <div className="text-muted-foreground line-through text-2xl mb-2">De R$ 59,90</div>
-              <div className="text-5xl md:text-6xl font-bold text-accent mb-2">R$ 29,90</div>
-              <div className="text-xl text-primary font-semibold">50% OFF - Black Friday</div>
-            </div>
+          <Card className="p-6 md:p-10 bg-card/50 backdrop-blur-sm border-border">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Left - Price */}
+              <div className="flex flex-col justify-center">
+                <div className="mb-6">
+                  <div className="text-muted-foreground text-sm mb-1">De R$ 59,90 por</div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-5xl font-bold text-accent">R$ 29,90</span>
+                  </div>
+                  <div className="text-accent/80 text-sm font-medium mt-1">50% OFF - Black Friday</div>
+                </div>
 
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <Check className="w-6 h-6 text-accent flex-shrink-0" />
-                <span>11 E-books Completos (Básico ao Avançado)</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-6 h-6 text-accent flex-shrink-0" />
-                <span>Estratégia dos 168M de Visualizações</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-6 h-6 text-accent flex-shrink-0" />
-                <span>Templates de Prompts Exclusivos</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-6 h-6 text-accent flex-shrink-0" />
-                <span>Acesso Vitalício</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-6 h-6 text-accent flex-shrink-0" />
-                <span>Atualizações Gratuitas</span>
-              </div>
-            </div>
+                <Button 
+                  size="lg" 
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 shadow-lg text-lg mb-4"
+                  onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
+                >
+                  Comprar Agora
+                </Button>
 
-            <Button 
-              size="lg" 
-              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-xl py-8 shadow-glow"
-              onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
-            >
-              GARANTIR MINHA VAGA AGORA
-              <Sparkles className="ml-2" />
-            </Button>
+                <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+                  <Shield className="w-3.5 h-3.5" />
+                  <span>Garantia de 7 dias</span>
+                </div>
+              </div>
 
-            <div className="mt-6 text-center">
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <Shield className="w-4 h-4" />
-                <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+              {/* Right - Features */}
+              <div className="space-y-3">
+                {[
+                  "11 E-books Completos",
+                  "Estratégia dos 168M de Views",
+                  "Técnica Exclusiva de Consistência",
+                  "Templates de Prompts",
+                  "Acesso Vitalício",
+                  "Atualizações Gratuitas"
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </Card>
-
-          <div className="mt-8 text-center">
-            <p className="text-accent font-semibold">⏰ Oferta válida apenas durante a Black Friday</p>
-          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4">
+      <section className="py-16 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-            Perguntas <span className="text-primary">Frequentes</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+            Perguntas Frequentes
           </h2>
 
           <Accordion type="single" collapsible className="space-y-4">
@@ -340,17 +300,17 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-4 bg-gradient-to-b from-primary/10 to-background">
+      <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Não Deixe Essa <span className="text-accent">Oportunidade</span> Passar
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Comece agora sua jornada
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            A Black Friday é sua chance de dominar a criação de vídeos com IA pelo menor preço do ano. Comece hoje mesmo sua jornada rumo à viralização.
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Aprenda a criar vídeos ultra-realistas com IA e domine as técnicas que geraram 168 milhões de visualizações.
           </p>
           <Button 
             size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-12 py-8 shadow-glow"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 shadow-lg"
             onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
           >
             COMEÇAR AGORA
