@@ -8,6 +8,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import metricasImg from "@/assets/metricas.png";
+import reelsImg from "@/assets/print_reels.png";
 
 const Index = () => {
   const scrollToCTA = () => {
@@ -70,9 +72,12 @@ const Index = () => {
 
             {/* Right Image/Video */}
             <div className="order-1 md:order-2 relative">
-              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 aspect-video flex items-center justify-center border border-primary/20">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(258,90%,66%,0.1),transparent)]" />
-                <Video className="w-24 h-24 text-primary/40" />
+              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
+                <img 
+                  src={metricasImg} 
+                  alt="Métricas de visualizações - 146.244.155 visualizações" 
+                  className="w-full h-auto"
+                />
               </div>
               
               {/* Decorative Icon - Top Right */}
@@ -124,13 +129,13 @@ const Index = () => {
               </div>
             </div>
             <div className="relative">
-              <Card className="p-8 bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
-                <div className="text-6xl font-bold text-primary mb-2">168M</div>
-                <div className="text-xl font-semibold mb-4">Visualizações Comprovadas</div>
-                <p className="text-muted-foreground">
-                  Esta não é teoria. São resultados reais de um criador que dominou a arte de criar vídeos ultra-realistas com IA.
-                </p>
-              </Card>
+              <div className="rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
+                <img 
+                  src={reelsImg} 
+                  alt="Print do Reels com 168 milhões de visualizações" 
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
