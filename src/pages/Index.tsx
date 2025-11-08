@@ -99,7 +99,7 @@ const Index = () => {
                 ESTRATÉGIA VALIDADA
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                168 Milhões de Visualizações no Instagram
+                168 Milhões de Visualizações no Instagram em um único vídeo!
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Todo o conhecimento do perfil <span className="text-primary font-bold">@vlogsensato</span> que conquistou resultados extraordinários criando vídeos com IA está neste guia completo.
