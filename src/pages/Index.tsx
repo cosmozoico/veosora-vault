@@ -173,13 +173,6 @@ const Index = () => {
                 </div>
               </Card>)}
           </div>
-
-          {/* Decorative Icon */}
-          <div className="mt-16 flex justify-center">
-            <div className="w-20 h-20 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/30 flex items-center justify-center">
-              <Star className="w-10 h-10 text-primary fill-primary/20" />
-            </div>
-          </div>
         </div>
       </section>
 
