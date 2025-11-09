@@ -14,7 +14,7 @@ const Index = () => {
   };
   return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-12 md:py-20 px-4">
+      <section className="relative overflow-hidden py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -67,7 +67,7 @@ const Index = () => {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-20 px-4 bg-secondary/50">
+      <section className="py-12 px-4 bg-secondary/50">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -115,7 +115,7 @@ const Index = () => {
       </section>
 
       {/* What You'll Receive */}
-      <section className="py-16 px-4 bg-secondary/30">
+      <section className="py-12 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">
@@ -173,7 +173,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="cta-section" className="py-16 px-4">
+      <section id="cta-section" className="py-12 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <Badge className="mb-3 bg-accent/20 text-accent border-accent/30 text-sm px-4 py-1.5">
@@ -219,7 +219,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 bg-secondary/30">
+      <section className="py-12 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
             Perguntas Frequentes
@@ -275,7 +275,7 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 px-4">
+      <section className="py-12 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Comece agora sua jornada
