@@ -17,7 +17,7 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="order-2 md:order-1">
+            <div className="md:order-1">
               <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 text-xs px-3 py-1">
                 BLACK FRIDAY 🔥🔥
               </Badge>
@@ -56,7 +56,7 @@ const Index = () => {
             </div>
 
             {/* Right Image/Video */}
-            <div className="order-1 md:order-2 relative">
+            <div className="md:order-2 relative">
               <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
                 <img src={metricasImg} alt="Métricas de visualizações - 146.244.155 visualizações" className="w-full h-auto" />
               </div>
