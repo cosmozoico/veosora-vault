@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Sparkles, Video, TrendingUp, Shield, Star } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ContainerScroll } from "@/components/ui/container-scroll";
 import metricasImg from "@/assets/metricas.png";
 import reelsImg from "@/assets/print_reels.png";
 const Index = () => {
@@ -56,15 +57,10 @@ const Index = () => {
             </div>
 
             {/* Right Image/Video */}
-            <div className="md:order-2 relative">
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
-                <img src={metricasImg} alt="Métricas de visualizações - 146.244.155 visualizações" className="w-full h-auto" />
-              </div>
-              
-              {/* Decorative Icon - Top Right */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-accent/20 backdrop-blur-sm border border-accent/30 flex items-center justify-center">
-                <Sparkles className="w-8 h-8 text-accent" />
-              </div>
+            <div className="md:order-2">
+              <ContainerScroll titleComponent={<></>}>
+                <img src={metricasImg} alt="Métricas de visualizações - 146.244.155 visualizações" className="w-full h-full object-cover object-left-top rounded-lg" />
+              </ContainerScroll>
             </div>
           </div>
         </div>
@@ -109,10 +105,10 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
-                <img src={reelsImg} alt="Print do Reels com 168 milhões de visualizações" className="w-full h-auto" />
-              </div>
+            <div>
+              <ContainerScroll titleComponent={<></>}>
+                <img src={reelsImg} alt="Print do Reels com 168 milhões de visualizações" className="w-full h-full object-cover object-left-top rounded-lg" />
+              </ContainerScroll>
             </div>
           </div>
         </div>
