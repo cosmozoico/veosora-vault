@@ -2,22 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Sparkles, Video, TrendingUp, Shield, Star } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import metricasImg from "@/assets/metricas.png";
 import reelsImg from "@/assets/print_reels.png";
-
 const Index = () => {
   const scrollToCTA = () => {
-    document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("cta-section")?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -37,19 +31,10 @@ const Index = () => {
               </p>
 
               <div className="flex gap-3 mb-8">
-                <Button 
-                  size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 shadow-lg"
-                  onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
-                >
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 shadow-lg" onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}>
                   Começar Agora
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-border hover:bg-secondary"
-                  onClick={scrollToCTA}
-                >
+                <Button size="lg" variant="outline" className="border-border hover:bg-secondary" onClick={scrollToCTA}>
                   Ver Mais
                 </Button>
               </div>
@@ -60,7 +45,7 @@ const Index = () => {
                   <div className="text-xs text-muted-foreground">Visualizações</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-foreground">8</div>
+                  <div className="text-2xl font-bold text-foreground">10</div>
                   <div className="text-xs text-muted-foreground">E-books</div>
                 </div>
                 <div>
@@ -73,11 +58,7 @@ const Index = () => {
             {/* Right Image/Video */}
             <div className="order-1 md:order-2 relative">
               <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
-                <img 
-                  src={metricasImg} 
-                  alt="Métricas de visualizações - 146.244.155 visualizações" 
-                  className="w-full h-auto"
-                />
+                <img src={metricasImg} alt="Métricas de visualizações - 146.244.155 visualizações" className="w-full h-auto" />
               </div>
               
               {/* Decorative Icon - Top Right */}
@@ -130,11 +111,7 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden border border-primary/20 shadow-xl">
-                <img 
-                  src={reelsImg} 
-                  alt="Print do Reels com 168 milhões de visualizações" 
-                  className="w-full h-auto"
-                />
+                <img src={reelsImg} alt="Print do Reels com 168 milhões de visualizações" className="w-full h-auto" />
               </div>
             </div>
           </div>
@@ -155,25 +132,46 @@ const Index = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Module Cards */}
-            {[
-              { icon: "✓", text: "Fundamentos de Vídeos com IA", color: "primary" },
-              { icon: "✓", text: "Prompts Avançados para Veo 3", color: "primary" },
-              { icon: "✓", text: "Domínio Completo do Sora 2", color: "primary" },
-              { icon: "✓", text: "Consistência de Personagem (Exclusivo)", color: "accent" },
-              { icon: "✓", text: "Estratégia de Viralização 168M", color: "accent" },
-              { icon: "✓", text: "Templates de Prompts Prontos", color: "primary" },
-              { icon: "✓", text: "Otimização para Redes Sociais", color: "primary" },
-              { icon: "✓", text: "Monetização de Conteúdo", color: "accent" }
-            ].map((item, i) => (
-              <Card key={i} className="p-4 bg-card border-border hover:border-primary/50 transition-colors">
+            {[{
+            icon: "✓",
+            text: "Fundamentos de Vídeos com IA",
+            color: "primary"
+          }, {
+            icon: "✓",
+            text: "Prompts Avançados para Veo 3",
+            color: "primary"
+          }, {
+            icon: "✓",
+            text: "Domínio Completo do Sora 2",
+            color: "primary"
+          }, {
+            icon: "✓",
+            text: "Consistência de Personagem (Exclusivo)",
+            color: "accent"
+          }, {
+            icon: "✓",
+            text: "Estratégia de Viralização 168M",
+            color: "accent"
+          }, {
+            icon: "✓",
+            text: "Templates de Prompts Prontos",
+            color: "primary"
+          }, {
+            icon: "✓",
+            text: "Otimização para Redes Sociais",
+            color: "primary"
+          }, {
+            icon: "✓",
+            text: "Monetização de Conteúdo",
+            color: "accent"
+          }].map((item, i) => <Card key={i} className="p-4 bg-card border-border hover:border-primary/50 transition-colors">
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 rounded-lg ${item.color === 'accent' ? 'bg-accent/20' : 'bg-primary/20'} flex items-center justify-center flex-shrink-0`}>
                     <Check className={`w-5 h-5 ${item.color === 'accent' ? 'text-accent' : 'text-primary'}`} />
                   </div>
                   <span className="text-sm font-medium">{item.text}</span>
                 </div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Decorative Icon */}
@@ -210,11 +208,7 @@ const Index = () => {
                   <div className="text-accent/80 text-sm font-medium mt-1">50% OFF - Black Friday</div>
                 </div>
 
-                <Button 
-                  size="lg" 
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 shadow-lg text-lg mb-4"
-                  onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
-                >
+                <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 shadow-lg text-lg mb-4" onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}>
                   Comprar Agora
                 </Button>
 
@@ -225,19 +219,10 @@ const Index = () => {
               </div>
 
               <div className="space-y-3">
-                {[
-                  "8 E-books Completos",
-                  "Estratégia dos 168M de Views",
-                  "Técnica Exclusiva de Consistência",
-                  "Templates de Prompts",
-                  "Acesso Vitalício",
-                  "Atualizações Gratuitas"
-                ].map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3">
+                {["8 E-books Completos", "Estratégia dos 168M de Views", "Técnica Exclusiva de Consistência", "Templates de Prompts", "Acesso Vitalício", "Atualizações Gratuitas"].map((feature, i) => <div key={i} className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-accent flex-shrink-0" />
                     <span className="text-sm">{feature}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </Card>
@@ -309,11 +294,7 @@ const Index = () => {
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Aprenda a criar vídeos ultra-realistas com IA e domine as técnicas que geraram 168 milhões de visualizações.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 shadow-lg"
-            onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}
-          >
+          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 shadow-lg" onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}>
             COMEÇAR AGORA
             <Sparkles className="ml-2" />
           </Button>
@@ -332,8 +313,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
