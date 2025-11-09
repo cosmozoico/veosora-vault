@@ -25,7 +25,7 @@ const Index = () => {
             {/* Left Content */}
             <div className="order-2 md:order-1">
               <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 text-xs px-3 py-1">
-                ⚡ BLACK FRIDAY
+                BLACK FRIDAY 🔥🔥
               </Badge>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
