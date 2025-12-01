@@ -29,7 +29,7 @@ const Index = () => {
               </p>
 
               <div className="flex gap-3 mb-8">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 shadow-lg" onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}>
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 shadow-lg" onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}>
                   Começar Agora
                 </Button>
                 <Button size="lg" variant="outline" className="border-border hover:bg-secondary" onClick={scrollToCTA}>
@@ -238,7 +238,11 @@ const Index = () => {
                   <div className="text-accent/80 text-sm font-medium mt-1">50% OFF</div>
                 </div>
 
-                <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 shadow-lg text-lg mb-4" onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}>
+                <Badge className="mb-3 bg-accent/20 text-accent border-accent/30 text-xs font-bold">
+                  💳 PAGAMENTO ÚNICO!
+                </Badge>
+
+                <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 shadow-lg text-lg mb-4" onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}>
                   Comprar Agora
                 </Button>
 
@@ -324,7 +328,7 @@ const Index = () => {
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Aprenda a criar vídeos ultra-realistas com IA e domine as técnicas que geraram 168 milhões de visualizações.
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 shadow-lg" onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}>
+          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 shadow-lg" onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}>
             COMEÇAR AGORA
             <Sparkles className="ml-2" />
           </Button>
