@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ContainerScroll } from "@/components/ui/container-scroll";
 import metricasImg from "@/assets/metricas.png";
 import reelsImg from "@/assets/print_reels.png";
+import vlogSensatoImg from "@/assets/vlogsensato1.png";
 const Index = () => {
   const scrollToCTA = () => {
     document.getElementById("cta-section")?.scrollIntoView({
@@ -19,10 +20,6 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="md:order-1">
-              <Badge className="mb-4 bg-accent/20 text-accent border-accent/30 text-xs px-3 py-1">
-                BLACK FRIDAY 🔥🔥
-              </Badge>
-              
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Domine o Sora 2 e Veo 3 por <span className="text-primary">preço de banana!</span> 😱
               </h1>
@@ -62,6 +59,24 @@ const Index = () => {
                 <img src={metricasImg} alt="Métricas de visualizações - 146.244.155 visualizações" className="w-full h-full object-cover object-left-top rounded-lg" />
               </ContainerScroll>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* YouTube Video Section */}
+      <section className="py-8 md:py-12 px-4 bg-secondary/30">
+        <div className="container mx-auto max-w-5xl">
+          <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/y95ZsCes6A0"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full"
+            />
           </div>
         </div>
       </section>
@@ -109,6 +124,35 @@ const Index = () => {
               <ContainerScroll titleComponent={<></>}>
                 <img src={reelsImg} alt="Print do Reels com 168 milhões de visualizações" className="w-full h-full object-cover object-left-top rounded-lg" />
               </ContainerScroll>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Personal Story Section */}
+      <section className="py-8 md:py-12 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Aprenda as estratégias e habilidades que me fizeram ter múltiplas fontes de renda
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Quando entrei no digital eu não fazia ideia do que estava fazendo. Fui aprendendo na prática, tentando, errando e estudando até entender o que realmente funciona. Com o tempo descobri que usar IA para criar personagens que conectam com a audiência é o que torna qualquer projeto mais sólido e lucrativo.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-4">
+                O "Vlog Viral com IA" nasceu dessa experiência. Nada de promessas fáceis, apenas o que realmente funciona. Você vai aprender estratégias aplicáveis, vai precisar de dedicação, e vai receber a base necessária para começar a trabalhar de casa criando conteúdo e personagens digitais com inteligência artificial.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="relative rounded-lg overflow-hidden shadow-2xl">
+                <img 
+                  src={vlogSensatoImg} 
+                  alt="Criadores de conteúdo digital com IA" 
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+              </div>
             </div>
           </div>
         </div>
@@ -176,9 +220,6 @@ const Index = () => {
       <section id="cta-section" className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <Badge className="mb-3 bg-accent/20 text-accent border-accent/30 text-sm px-4 py-1.5">
-              🔥 OFERTA BLACK FRIDAY
-            </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-2">
               Garanta sua vaga hoje
             </h2>
@@ -190,11 +231,11 @@ const Index = () => {
               {/* Left - Price */}
               <div className="flex flex-col justify-center">
                 <div className="mb-6">
-                  <div className="text-muted-foreground text-sm mb-1">De R$ 59,90 por</div>
+                  <div className="text-muted-foreground text-sm mb-1">De R$ 99,90 por</div>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-accent">R$ 29,90</span>
+                    <span className="text-5xl font-bold text-accent">R$ 49,90</span>
                   </div>
-                  <div className="text-accent/80 text-sm font-medium mt-1">50% OFF - Black Friday</div>
+                  <div className="text-accent/80 text-sm font-medium mt-1">50% OFF</div>
                 </div>
 
                 <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 shadow-lg text-lg mb-4" onClick={() => window.location.href = 'https://pay.kirvano.com/dbcb1389-20c7-48e2-8b06-4aacbb4446fa'}>
@@ -294,7 +335,7 @@ const Index = () => {
       <footer className="py-12 px-4 border-t border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <div>© 2024 Guia Prático de Vídeos com IA. Todos os direitos reservados.</div>
+            <div>© 2024 Vlog Viral com IA. Todos os direitos reservados.</div>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground transition-colors">Termos de Uso</a>
               <a href="#" className="hover:text-foreground transition-colors">Política de Privacidade</a>
