@@ -238,9 +238,9 @@ const Index = () => {
                   <div className="text-accent/80 text-sm font-medium mt-1">50% OFF</div>
                 </div>
 
-                <Badge className="mb-3 bg-accent/20 text-accent border-accent/30 text-xs font-bold">
-                  💳 PAGAMENTO ÚNICO!
-                </Badge>
+                <div className="mb-3 text-accent text-xs font-bold">
+                  PAGAMENTO ÚNICO!
+                </div>
 
                 <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 shadow-lg text-lg mb-4" onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}>
                   Comprar Agora
