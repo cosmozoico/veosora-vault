@@ -135,7 +135,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Aprenda as estratégias e habilidades que me fizeram ter múltiplas fontes de renda
+                Aprenda as estratégias e habilidades que me fizeram ter múltiplas <span className="text-primary">fontes de renda</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Quando entrei no digital eu não fazia ideia do que estava fazendo. Fui aprendendo na prática, tentando, errando e estudando até entender o que realmente funciona. Com o tempo descobri que usar IA para criar personagens que conectam com a audiência é o que torna qualquer projeto mais sólido e lucrativo.
@@ -151,7 +151,7 @@ const Index = () => {
                   alt="Criadores de conteúdo digital com IA" 
                   className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
               </div>
             </div>
           </div>
@@ -231,7 +231,7 @@ const Index = () => {
               {/* Left - Price */}
               <div className="flex flex-col justify-center">
                 <div className="mb-6">
-                  <div className="text-muted-foreground text-sm mb-1">De R$ 99,90 por</div>
+                  <div className="text-muted-foreground text-sm mb-1">De <span className="line-through">R$ 99,90</span> por</div>
                   <div className="flex items-baseline gap-2">
                     <span className="text-5xl font-bold text-accent">R$ 49,90</span>
                   </div>
