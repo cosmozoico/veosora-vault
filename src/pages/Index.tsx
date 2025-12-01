@@ -6,7 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ContainerScroll } from "@/components/ui/container-scroll";
 import metricasImg from "@/assets/metricas.png";
 import reelsImg from "@/assets/print_reels.png";
-import vlogSensatoImg from "@/assets/vlogsensato1.png";
+import vlogSensatoImg from "@/assets/vlogsensato2.png";
 const Index = () => {
   const scrollToCTA = () => {
     document.getElementById("cta-section")?.scrollIntoView({
@@ -135,7 +135,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Aprenda as estratégias e habilidades que me fizeram ter múltiplas <span className="text-primary">fontes de renda</span>
+                Aprenda as <span className="text-primary">estratégias</span> e habilidades que me fizeram ter múltiplas <span className="text-primary">fontes de renda</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Quando entrei no digital eu não fazia ideia do que estava fazendo. Fui aprendendo na prática, tentando, errando e estudando até entender o que realmente funciona. Com o tempo descobri que usar IA para criar personagens que conectam com a audiência é o que torna qualquer projeto mais sólido e lucrativo.
