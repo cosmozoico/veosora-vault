@@ -15,21 +15,20 @@ const Index = () => {
   };
   return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-12 md:py-20 px-4">
-        <div className="container mx-auto max-w-6xl px-2">
-          <div className="relative min-h-[600px] md:min-h-[700px] flex items-center">
-            {/* Background Image - Right Top Corner */}
-            <div className="absolute top-0 right-0 w-full md:w-2/3 h-full">
-              <img 
-                src={header1Img} 
-                alt="Métricas de visualizações - 146.244.155 visualizações" 
-                className="w-full h-full object-cover object-right-top" 
-              />
-            </div>
+      <section className="relative overflow-hidden py-12 md:py-20">
+        <div className="relative min-h-[600px] md:min-h-[700px] flex items-center container mx-auto max-w-6xl px-4">
+          {/* Background Image - Right Top Corner */}
+          <div className="absolute top-0 right-0 w-full md:w-2/3 h-full -mr-4 md:mr-0">
+            <img 
+              src={header1Img} 
+              alt="Métricas de visualizações - 146.244.155 visualizações" 
+              className="w-full h-full object-cover object-right-top" 
+            />
+          </div>
 
-            {/* Gradient Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+          {/* Gradient Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 via-50% to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent via-70% to-transparent"></div>
 
             {/* Content Over Image */}
             <div className="relative z-10 max-w-2xl">
@@ -65,7 +64,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
