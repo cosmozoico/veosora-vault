@@ -15,10 +15,10 @@ const Index = () => {
   };
   return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-12 md:py-20">
-        <div className="relative min-h-[600px] md:min-h-[700px] flex items-center container mx-auto max-w-6xl px-4">
+      <section className="relative overflow-x-clip py-12 md:py-20">
+        <div className="relative min-h-[600px] md:min-h-[700px] flex items-center">
           {/* Background Image - Right Top Corner */}
-          <div className="absolute top-0 -right-4 w-full md:w-2/3 h-full">
+          <div className="absolute top-0 right-0 w-[120%] md:w-2/3 h-full">
             <img 
               src={header1Img} 
               alt="Métricas de visualizações - 146.244.155 visualizações" 
@@ -27,11 +27,11 @@ const Index = () => {
           </div>
 
           {/* Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 via-30% to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent via-85% to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 via-20% to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent via-90% to-transparent"></div>
 
             {/* Content Over Image */}
-            <div className="relative z-10 max-w-2xl">
+            <div className="relative z-10 max-w-2xl container mx-auto px-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Aprenda a criar <span className="text-primary">vídeos virais</span> com IA e ganhe em <span className="text-primary">dólar</span> $
               </h1>
