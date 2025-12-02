@@ -1,21 +1,93 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Sparkles, Video, TrendingUp, Shield, Star } from "lucide-react";
+import { Check, Sparkles, Video, TrendingUp, Shield, Star, BookOpen, Zap, Brain, Target, FileText, Share2, DollarSign } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ContainerScroll } from "@/components/ui/container-scroll";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import header1Img from "@/assets/header1.png";
-import reelsImg from "@/assets/print_reels.png";
+import lurdinha2 from "@/assets/lurdinha2.png";
 import metricasImg from "@/assets/metricas.png";
+import bgJpg from "@/assets/bgjpg.jpg";
+
+const BentoGrid = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div
+      className={`grid w-full auto-rows-[16rem] grid-cols-3 gap-4 ${className || ''}`}
+    >
+      {children}
+    </div>
+  );
+};
+
+const BentoCard = ({
+  name,
+  className,
+  background,
+  Icon,
+  description,
+  href,
+  cta,
+}: {
+  name: string;
+  className: string;
+  background: React.ReactNode;
+  Icon: any;
+  description: string;
+  href: string;
+  cta: string;
+}) => (
+  <div
+    key={name}
+    className={`group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl border border-gray-800 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu ${className}`}
+    style={{ backgroundColor: '#0F1114' }}
+  >
+    <div className="absolute inset-0" style={{ backgroundColor: '#0F1114', zIndex: 1 }}></div>
+    <div style={{ position: 'relative', zIndex: 2 }}>{background}</div>
+    <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10" style={{ position: 'relative', zIndex: 3 }}>
+      <Icon className="h-12 w-12 origin-left transform-gpu text-white transition-all duration-300 ease-in-out group-hover:scale-75" />
+      <h3 className="text-xl font-semibold text-white">
+        {name}
+      </h3>
+      <p className="max-w-lg text-gray-400">{description}</p>
+    </div>
+
+    <div className="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+      <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
+        <a href={href}>
+          {cta}
+          <span className="ml-2">→</span>
+        </a>
+      </Button>
+    </div>
+    <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
+  </div>
+);
+
 const Index = () => {
   const scrollToCTA = () => {
     document.getElementById("cta-section")?.scrollIntoView({
       behavior: "smooth"
     });
   };
-  return <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground relative">
+      <div className="absolute inset-0 w-full h-full">
+        <img 
+          src={bgJpg} 
+          alt="Background" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="relative z-10">
       {/* Hero Section */}
-      <section className="relative overflow-x-clip py-12 md:py-20">
+      <section className="relative overflow-x-clip">
         <div className="relative min-h-[600px] md:min-h-[700px] flex items-center">
           {/* Background Image - Right Top Corner */}
           <div className="absolute top-0 right-0 w-[120%] md:w-2/3 h-full">
@@ -26,27 +98,72 @@ const Index = () => {
             />
           </div>
 
-          {/* Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 via-20% to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent via-90% to-transparent"></div>
+          {/* Mobile Hero Text Overlay */}
+          <div className="md:hidden absolute top-0 right-0 w-full h-full flex flex-col justify-start items-end p-4 pt-16 text-right">
+            <div className="max-w-[200px]">
+              <h1 className="text-3xl font-bold leading-tight text-white mb-2">
+                Aprenda a criar vídeos <span className="text-[#BB33FF]">virais</span> com IA e ganhe em <span className="text-[#BB33FF]">dólar</span> $
+              </h1>
+              <p className="text-sm text-muted-foreground text-white">
+                Aprenda a criar vídeos ultra-realistas com as IAs mais avançadas do mercado. A mesma estratégia que gerou <span className="font-semibold text-yellow-400">168 milhões de visualizações</span>.
+              </p>
+            </div>
+          </div>
 
             {/* Content Over Image */}
-            <div className="relative z-10 max-w-2xl container mx-auto px-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Aprenda a criar <span className="text-primary">vídeos virais</span> com IA e ganhe em <span className="text-primary">dólar</span> $
-              </h1>
+            <div className="relative z-10 max-w-xl container mx-auto px-4 mr-auto ml-4 md:ml-8 hidden md:block">
+              <div className="mb-6">
+                <TypewriterEffect 
+                  words={[
+                    { text: "Aprenda" },
+                    { text: "a" },
+                    { text: "criar" },
+                    { text: "vídeos", className: "text-[#BB33FF]" },
+                    { text: "virais", className: "text-[#BB33FF]" },
+                    { text: "com" },
+                    { text: "IA" },
+                    { text: "e" },
+                    { text: "ganhe" },
+                    { text: "em" },
+                    { text: "dólar", className: "text-[#BB33FF]" },
+                    { text: "$", className: "text-white" }
+                  ]}
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-left"
+                  cursorClassName="bg-[#BB33FF]"
+                />
+              </div>
               
               <p className="text-base md:text-lg text-muted-foreground mb-6">
-                Aprenda a criar vídeos ultra-realistas com as IAs mais avançadas do mercado. A mesma estratégia que gerou <span className="text-primary font-semibold">168 milhões de visualizações</span>.
+                Aprenda a criar vídeos ultra-realistas com as IAs mais avançadas do mercado. A mesma estratégia que gerou <span className="font-semibold text-white">168 milhões de visualizações</span>.
               </p>
 
               <div className="flex gap-3 mb-8">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 shadow-lg" onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}>
-                  Começar Agora
-                </Button>
-                <Button size="lg" variant="outline" className="border-border hover:bg-secondary" onClick={scrollToCTA}>
+                <InteractiveHoverButton 
+                  text="Começar Agora" 
+                  className="bg-gradient-to-r from-[#ba15c5] to-[#4586ff] text-white px-8 shadow-lg border-transparent hover:from-[#1afb65] hover:to-[#0dd0c6] hover:text-white w-auto min-w-40 flex justify-center transition-all duration-300" style={{ boxShadow: '0 0 20px rgba(186, 21, 197, 0.5)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(26, 251, 101, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(186, 21, 197, 0.5)'}
+                  onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}
+                />
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black rounded-full" onClick={scrollToCTA}>
                   Ver Mais
                 </Button>
+              </div>
+
+              {/* Mobile Stats */}
+              <div className="md:hidden absolute bottom-8 left-4 right-4">
+                <div className="flex gap-6 justify-center">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white">168M+</div>
+                    <div className="text-xs text-white">Visualizações</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white">10</div>
+                    <div className="text-xs text-white">E-books</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white">100%</div>
+                    <div className="text-xs text-white">Prático</div>
+                  </div>
+                </div>
               </div>
 
               <div className="flex gap-8">
@@ -67,19 +184,37 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Mobile Stats */}
+      <div className="md:hidden absolute top-[550px] left-4 right-4 z-20">
+        <div className="flex gap-6 justify-center">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">168M+</div>
+            <div className="text-xs text-white">Visualizações</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">10</div>
+            <div className="text-xs text-white">E-books</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">100%</div>
+            <div className="text-xs text-white">Prático</div>
+          </div>
+        </div>
+      </div>
+
       {/* YouTube Video Section */}
-      <section className="py-8 md:py-12 px-4">
+      <section className="py-8 md:py-12 px-4 relative z-50">
         <div className="container mx-auto max-w-5xl">
-          <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl">
+          <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl relative z-50">
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/y95ZsCes6A0"
+              src="https://www.youtube.com/embed/JRJUp__RkiE"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              className="w-full h-full"
+              className="w-full h-full relative z-50"
             />
           </div>
         </div>
@@ -89,16 +224,16 @@ const Index = () => {
       <section className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="hidden md:block">
               <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
                 <Star className="w-4 h-4 mr-1 fill-primary" />
                 ESTRATÉGIA VALIDADA
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                168 Milhões de Visualizações no Instagram em um único vídeo!
+                <span style={{ color: '#BB33FF' }}>168 Milhões</span> de Visualizações no <span style={{ color: '#BB33FF' }}>Instagram</span> em um único vídeo!
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Todo o conhecimento do perfil <span className="text-primary font-bold">@vlogsensato</span> que conquistou resultados extraordinários criando vídeos com IA está neste guia completo.
+                Todo o conhecimento do perfil <a href="https://www.instagram.com/vlogsensato/" target="_blank" rel="noopener noreferrer" className="font-bold hover:underline" style={{ color: '#F0D91E' }}>@vlogsensato</a> que conquistou resultados extraordinários criando vídeos com IA está neste guia completo.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -124,10 +259,105 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center">
-              <img src={reelsImg} alt="Print do Reels com 168 milhões de visualizações" className="w-full max-w-xs h-auto rounded-lg shadow-lg mx-auto" />
+            <div className="md:hidden relative w-full h-full min-h-[700px] order-1">
+              <img 
+                src={lurdinha2} 
+                alt="Lurdinha" 
+                className="absolute inset-0 w-full h-full object-cover scale-350 top-40"
+              />
+              {/* Side Gradient Overlay */}
+              <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/70"></div>
+              </div>
+              {/* Mobile Text Overlay */}
+              <div className="absolute top-2 left-0 right-0 max-w-[300px] mx-auto text-center relative z-10">
+                <h2 className="text-2xl font-bold mb-3 text-white">
+                  <span style={{ color: '#BB33FF' }}>168 Milhões</span> de Visualizações no <span style={{ color: '#BB33FF' }}>Instagram</span>
+                </h2>
+                <p className="text-sm text-white mb-4">
+                  Todo o conhecimento do perfil <a href="https://www.instagram.com/vlogsensato/" target="_blank" rel="noopener noreferrer" className="font-bold hover:underline" style={{ color: '#F0D91E' }}>@vlogsensato</a> que conquistou resultados extraordinários criando vídeos com IA está neste guia completo.
+                </p>
+              </div>
+            </div>
+            <div className="hidden md:block relative w-full h-full min-h-[500px]">
+              <img 
+                src={lurdinha2} 
+                alt="Lurdinha" 
+                className="absolute inset-0 w-full h-full object-contain scale-150"
+              />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* What You'll Receive */}
+      <section className="py-8 md:py-12 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">
+              O que você vai aprender
+            </h2>
+            <p className="text-muted-foreground">
+              10 E-books completos do básico ao avançado
+            </p>
+          </div>
+
+          <BentoGrid className="max-w-6xl mx-auto">
+            <BentoCard
+              name="Fundamentos de Vídeos com IA"
+              className="col-span-3 md:col-span-1"
+              background={<div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 opacity-10"></div>}
+              Icon={BookOpen}
+              description="Aprenda os conceitos básicos de criação de vídeos com inteligência artificial do zero."
+              href="#cta-section"
+              cta="Aprender mais"
+            />
+            <BentoCard
+              name="Prompts Avançados para Veo 3"
+              className="col-span-3 md:col-span-1"
+              background={<div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 opacity-10"></div>}
+              Icon={Zap}
+              description="Domine os prompts mais avançados para extrair o máximo do Veo 3."
+              href="#cta-section"
+              cta="Aprender mais"
+            />
+            <BentoCard
+              name="Domínio Completo do Sora 2"
+              className="col-span-3 md:col-span-1"
+              background={<div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-indigo-800 opacity-10"></div>}
+              Icon={Brain}
+              description="Torne-se mestre na ferramenta mais poderosa de criação de vídeos com IA."
+              href="#cta-section"
+              cta="Aprender mais"
+            />
+            <BentoCard
+              name="Consistência de Personagem (Exclusivo)"
+              className="col-span-3 md:col-span-1"
+              background={<div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 opacity-10"></div>}
+              Icon={Target}
+              description="Técnica exclusiva para manter personagens consistentes em todos os vídeos."
+              href="#cta-section"
+              cta="Aprender mais"
+            />
+            <BentoCard
+              name="Templates de Prompts Prontos"
+              className="col-span-3 md:col-span-1"
+              background={<div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-indigo-800 opacity-10"></div>}
+              Icon={FileText}
+              description="Coleção de templates prontos para usar imediatamente em seus projetos."
+              href="#cta-section"
+              cta="Aprender mais"
+            />
+            <BentoCard
+              name="Monetização de Conteúdo"
+              className="col-span-3 md:col-span-1"
+              background={<div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 opacity-10"></div>}
+              Icon={DollarSign}
+              description="Transforme seus vídeos em fontes de renda com estratégias comprovadas."
+              href="#cta-section"
+              cta="Aprender mais"
+            />
+          </BentoGrid>
         </div>
       </section>
 
@@ -157,108 +387,83 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What You'll Receive */}
-      <section className="py-8 md:py-12 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">
-              O que você vai aprender
-            </h2>
-            <p className="text-muted-foreground">
-              8 E-books completos do básico ao avançado
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* Module Cards */}
-            {[{
-            icon: "✓",
-            text: "Fundamentos de Vídeos com IA",
-            color: "primary"
-          }, {
-            icon: "✓",
-            text: "Prompts Avançados para Veo 3",
-            color: "primary"
-          }, {
-            icon: "✓",
-            text: "Domínio Completo do Sora 2",
-            color: "primary"
-          }, {
-            icon: "✓",
-            text: "Consistência de Personagem (Exclusivo)",
-            color: "accent"
-          }, {
-            icon: "✓",
-            text: "Estratégia de Viralização 168M",
-            color: "accent"
-          }, {
-            icon: "✓",
-            text: "Templates de Prompts Prontos",
-            color: "primary"
-          }, {
-            icon: "✓",
-            text: "Otimização para Redes Sociais",
-            color: "primary"
-          }, {
-            icon: "✓",
-            text: "Monetização de Conteúdo",
-            color: "accent"
-          }].map((item, i) => <Card key={i} className="p-4 bg-card border-border hover:border-primary/50 transition-colors">
-                <div className="flex items-center gap-3">
-                  <div className={`w-8 h-8 rounded-lg ${item.color === 'accent' ? 'bg-accent/20' : 'bg-primary/20'} flex items-center justify-center flex-shrink-0`}>
-                    <Check className={`w-5 h-5 ${item.color === 'accent' ? 'text-accent' : 'text-primary'}`} />
-                  </div>
-                  <span className="text-sm font-medium">{item.text}</span>
-                </div>
-              </Card>)}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section id="cta-section" className="py-8 md:py-12 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">
-              Garanta sua vaga hoje
-            </h2>
-            <p className="text-muted-foreground text-sm">Oferta por tempo limitado</p>
-          </div>
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left - Text Content */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Garanta sua vaga hoje
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Oferta por tempo limitado. Aprenda a criar vídeos ultra-realistas com IA e domine as técnicas que geraram 168 milhões de visualizações.
+              </p>
+            </div>
+            
+            {/* Right - Pricing Card */}
+            <div className="bg-[#0F1114] rounded-2xl p-8 shadow-2xl border border-gray-800 text-white">
+              <div className="text-center mb-6">
+                <Badge className="mb-4 bg-purple-400/20 text-purple-400 border-purple-400/30">
+                  <Star className="w-4 h-4 mr-1 fill-purple-400" />
+                  VAGAS LIMITADAS
+                </Badge>
+                <div className="text-purple-400 text-sm mb-1">De <span className="line-through">R$ 99,90</span> por</div>
+                <div className="flex items-baseline justify-center gap-2">
+                  <span className="text-5xl md:text-6xl font-bold text-white">R$ 49,90</span>
+                </div>
+                <div className="text-purple-400 text-sm font-bold mt-2">10% de desconto no Pix</div>
+              </div>
 
-          <Card className="p-6 md:p-10 bg-card/50 backdrop-blur-sm border-border">
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Left - Price */}
-              <div className="flex flex-col justify-center">
-                <div className="mb-6">
-                  <div className="text-muted-foreground text-sm mb-1">De <span className="line-through">R$ 99,90</span> por</div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-accent">R$ 49,90</span>
+              <div className="mb-6 text-white text-sm font-bold bg-gray-700 rounded-full px-6 py-2 text-center mx-auto w-fit">
+                PAGAMENTO ÚNICO!
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-3 text-white">
+                  <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-[#0F1114]" />
                   </div>
-                  <div className="text-accent/80 text-sm font-medium mt-1">50% OFF</div>
+                  <span className="text-gray-300">10 E-books Completos</span>
                 </div>
-
-                <div className="mb-3 text-accent text-xs font-bold">
-                  PAGAMENTO ÚNICO!
+                <div className="flex items-center gap-3 text-white">
+                  <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-[#0F1114]" />
+                  </div>
+                  <span className="text-gray-300">Estratégia dos 168M de Views</span>
                 </div>
-
-                <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 shadow-lg text-lg mb-4" onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}>
-                  Comprar Agora
-                </Button>
-
-                <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                  <Shield className="w-3.5 h-3.5" />
-                  <span>Garantia de 7 dias</span>
+                <div className="flex items-center gap-3 text-white">
+                  <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-[#0F1114]" />
+                  </div>
+                  <span className="text-gray-300">Técnica Exclusiva de Consistência</span>
+                </div>
+                <div className="flex items-center gap-3 text-white">
+                  <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-[#0F1114]" />
+                  </div>
+                  <span className="text-gray-300">Acesso Vitalício</span>
                 </div>
               </div>
 
-              <div className="space-y-3">
-                {["8 E-books Completos", "Estratégia dos 168M de Views", "Técnica Exclusiva de Consistência", "Templates de Prompts", "Acesso Vitalício", "Atualizações Gratuitas"].map((feature, i) => <div key={i} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-sm">{feature}</span>
-                  </div>)}
+              <div className="mb-4 text-center">
+                <div className="text-purple-400 text-sm font-bold">
+                  
+                </div>
+              </div>
+
+              <InteractiveHoverButton 
+                text="COMPRAR AGORA" 
+                className="bg-gradient-to-r from-[#ba15c5] to-[#4586ff] text-white py-4 shadow-lg text-lg font-bold border-transparent hover:from-[#1afb65] hover:to-[#0dd0c6] hover:text-white w-full transition-all duration-300" style={{ boxShadow: '0 0 20px rgba(186, 21, 197, 0.5)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(26, 251, 101, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(186, 21, 197, 0.5)'}
+                onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}
+              />
+
+              <div className="flex items-center justify-center gap-2 text-xs text-gray-400 mt-6">
+                <Shield className="w-4 h-4" />
+                <span>Garantia de 7 dias</span>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
       </section>
 
@@ -293,20 +498,21 @@ const Index = () => {
                 Como terei acesso ao material?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Imediatamente após a compra, você receberá um email com acesso à área de membros onde estão todos os e-books e materiais complementares. O acesso é vitalício.
+                Imediatamente após a compra, você receberá um email com acesso à área de membros onde estão todos os e-books e materiais complementares. O acesso é vitalício. Além disso, você também receberá atualizações periódicas com novos conteúdos e recursos para ajudá-lo a melhorar suas habilidades.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4" className="border border-border rounded-lg px-6 bg-card">
+            
+            <AccordionItem value="item-5" className="border border-border rounded-lg px-6 bg-card">
               <AccordionTrigger className="text-left hover:no-underline">
-                A estratégia de 168M visualizações realmente funciona?
+                Consigo ganhar dinheiro com inteligência artificial?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Sim! Toda a estratégia está documentada e foi aplicada pelo perfil @vlogsensato. Você terá acesso aos roteiros, prompts e técnicas de distribuição exatas que geraram esses resultados.
+                Sim é possível ganhar dinheiro com IA, seja com monetização do tiktok, youtube, fazendo parcerias pagas e publicidades para empresas no instagram, ou até mesmo prestando serviços de criação de vídeos personalizados.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-5" className="border border-border rounded-lg px-6 bg-card">
+            <AccordionItem value="item-6" className="border border-border rounded-lg px-6 bg-card">
               <AccordionTrigger className="text-left hover:no-underline">
                 Existe garantia?
               </AccordionTrigger>
@@ -318,27 +524,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-8 md:py-12 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Comece agora sua jornada
-          </h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Aprenda a criar vídeos ultra-realistas com IA e domine as técnicas que geraram 168 milhões de visualizações.
-          </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 shadow-lg" onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}>
-            COMEÇAR AGORA
-            <Sparkles className="ml-2" />
-          </Button>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="py-12 px-4 border-t border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <div>© 2024 Vlog Viral com IA. Todos os direitos reservados.</div>
+            <div> 2024 Vlog Viral com IA. Todos os direitos reservados.</div>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground transition-colors">Termos de Uso</a>
               <a href="#" className="hover:text-foreground transition-colors">Política de Privacidade</a>
@@ -346,6 +536,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  </div>
 };
 export default Index;
