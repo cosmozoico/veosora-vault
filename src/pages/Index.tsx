@@ -17,9 +17,18 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-6xl px-2">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left Content */}
-            <div className="md:order-1">
+          <div className="relative min-h-[600px] md:min-h-[700px] flex items-center">
+            {/* Background Image */}
+            <div className="absolute inset-0 flex items-center justify-center md:justify-end">
+              <img 
+                src={header1Img} 
+                alt="Métricas de visualizações - 146.244.155 visualizações" 
+                className="w-full md:w-3/4 h-auto rounded-lg shadow-lg opacity-40 md:opacity-100" 
+              />
+            </div>
+
+            {/* Content Over Image */}
+            <div className="relative z-10 max-w-2xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Aprenda a criar <span className="text-primary">vídeos virais</span> com IA e ganhe em <span className="text-primary">dólar</span> $
               </h1>
@@ -51,11 +60,6 @@ const Index = () => {
                   <div className="text-xs text-muted-foreground">Prático</div>
                 </div>
               </div>
-            </div>
-
-            {/* Right Image/Video */}
-            <div className="md:order-2">
-              <img src={header1Img} alt="Métricas de visualizações - 146.244.155 visualizações" className="w-full h-auto rounded-lg shadow-lg md:scale-150 lg:scale-175" />
             </div>
           </div>
         </div>
