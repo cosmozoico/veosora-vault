@@ -4,9 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Sparkles, Video, TrendingUp, Shield, Star } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ContainerScroll } from "@/components/ui/container-scroll";
-import metricasImg from "@/assets/metricas.png";
+import header1Img from "@/assets/header1.png";
 import reelsImg from "@/assets/print_reels.png";
-import vlogSensatoImg from "@/assets/vlogsensato2.png";
+import metricasImg from "@/assets/metricas.png";
 const Index = () => {
   const scrollToCTA = () => {
     document.getElementById("cta-section")?.scrollIntoView({
@@ -15,13 +15,13 @@ const Index = () => {
   };
   return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-6 md:py-12 px-4">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="relative overflow-hidden py-12 md:py-20 px-4">
+        <div className="container mx-auto max-w-6xl px-2">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
             <div className="md:order-1">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Domine o Sora 2 e Veo 3 por <span className="text-primary">preço de banana!</span> 😱
+                Aprenda a criar <span className="text-primary">vídeos virais</span> com IA e ganhe em <span className="text-primary">dólar</span> $
               </h1>
               
               <p className="text-base md:text-lg text-muted-foreground mb-6">
@@ -55,16 +55,14 @@ const Index = () => {
 
             {/* Right Image/Video */}
             <div className="md:order-2">
-              <ContainerScroll titleComponent={<></>}>
-                <img src={metricasImg} alt="Métricas de visualizações - 146.244.155 visualizações" className="w-full h-full object-cover object-left-top rounded-lg" />
-              </ContainerScroll>
+              <img src={header1Img} alt="Métricas de visualizações - 146.244.155 visualizações" className="w-full h-auto rounded-lg shadow-lg md:scale-150 lg:scale-175" />
             </div>
           </div>
         </div>
       </section>
 
       {/* YouTube Video Section */}
-      <section className="py-8 md:py-12 px-4 bg-secondary/30">
+      <section className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl">
             <iframe
@@ -82,7 +80,7 @@ const Index = () => {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-8 md:py-12 px-4 bg-secondary/50">
+      <section className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -120,10 +118,8 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div>
-              <ContainerScroll titleComponent={<></>}>
-                <img src={reelsImg} alt="Print do Reels com 168 milhões de visualizações" className="w-full h-full object-cover object-left-top rounded-lg" />
-              </ContainerScroll>
+            <div className="flex flex-col justify-center">
+              <img src={reelsImg} alt="Print do Reels com 168 milhões de visualizações" className="w-full max-w-xs h-auto rounded-lg shadow-lg mx-auto" />
             </div>
           </div>
         </div>
@@ -145,21 +141,18 @@ const Index = () => {
               </p>
             </div>
             <div className="relative">
-              <div className="relative rounded-lg overflow-hidden shadow-2xl">
-                <img 
-                  src={vlogSensatoImg} 
-                  alt="Criadores de conteúdo digital com IA" 
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
-              </div>
+              <img 
+                src={metricasImg} 
+                alt="Criadores de conteúdo digital com IA" 
+                className="w-full h-auto object-cover rounded-lg shadow-2xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* What You'll Receive */}
-      <section className="py-8 md:py-12 px-4 bg-secondary/30">
+      <section className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">
@@ -264,7 +257,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-8 md:py-12 px-4 bg-secondary/30">
+      <section className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
             Perguntas Frequentes
