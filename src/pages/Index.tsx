@@ -104,9 +104,16 @@ const Index = () => {
               <h1 className="text-3xl font-bold leading-tight text-white mb-2">
                 Aprenda a criar vídeos <span className="text-[#BB33FF]">virais</span> com IA e ganhe em <span className="text-[#BB33FF]">dólar</span> $
               </h1>
-              <p className="text-sm text-muted-foreground text-white">
+              <p className="text-sm text-muted-foreground text-white mb-4">
                 Aprenda a criar vídeos ultra-realistas com as IAs mais avançadas do mercado. A mesma estratégia que gerou <span className="font-semibold text-yellow-400">168 milhões de visualizações</span>.
               </p>
+              <div className="flex flex-col gap-3 mb-4">
+                <InteractiveHoverButton 
+                  text="Começar Agora" 
+                  className="bg-gradient-to-r from-[#ba15c5] to-[#4586ff] text-white px-6 py-2 shadow-lg border-transparent hover:from-[#1afb65] hover:to-[#0dd0c6] hover:text-white w-full text-sm transition-all duration-300" style={{ boxShadow: '0 0 20px rgba(186, 21, 197, 0.5)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(26, 251, 101, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(186, 21, 197, 0.5)'}
+                  onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}
+                />
+              </div>
             </div>
           </div>
 
@@ -291,7 +298,7 @@ const Index = () => {
       </section>
 
       {/* What You'll Receive */}
-      <section className="py-8 md:py-12 px-4">
+      <section className="py-8 md:py-12 px-4 md:mt-0 mt-[150px]">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">
