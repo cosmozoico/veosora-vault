@@ -7,22 +7,22 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const images = [
-  'src/assets/header1.webp',
-  'src/assets/lurdinha2.webp',
-  'src/assets/metricas.webp',
-  'src/assets/bgjpg.webp'
+  { path: 'src/assets/header1.webp', quality: 80 },
+  { path: 'src/assets/lurdinha2.webp', quality: 60 },
+  { path: 'src/assets/metricas.webp', quality: 80 },
+  { path: 'src/assets/bgjpg.webp', quality: 80 }
 ];
 
 async function optimizeImages() {
-  for (const imagePath of images) {
+  for (const imageConfig of images) {
     try {
-      const inputBuffer = fs.readFileSync(imagePath);
+      const inputBuffer = fs.readFileSync(imageConfig.path);
       const originalSize = inputBuffer.length;
       
-      // Otimizar com qualidade 80% e remover metadados desnecessários
+      // Otimizar com qualidade específica e remover metadados desnecessários
       const optimizedBuffer = await sharp(inputBuffer)
         .webp({ 
-          quality: 80,
+          quality: imageConfig.quality,
           effort: 6,
           smartSubsample: true
         })
@@ -32,15 +32,15 @@ async function optimizeImages() {
       const savings = originalSize - optimizedSize;
       const savingsPercent = ((savings / originalSize) * 100).toFixed(1);
       
-      fs.writeFileSync(imagePath, optimizedBuffer);
+      fs.writeFileSync(imageConfig.path, optimizedBuffer);
       
-      console.log(`${path.basename(imagePath)}:`);
+      console.log(`${path.basename(imageConfig.path)}:`);
       console.log(`  Original: ${(originalSize / 1024).toFixed(1)} KB`);
       console.log(`  Otimizado: ${(optimizedSize / 1024).toFixed(1)} KB`);
       console.log(`  Economia: ${(savings / 1024).toFixed(1)} KB (${savingsPercent}%)\n`);
       
     } catch (error) {
-      console.error(`Erro ao otimizar ${imagePath}:`, error.message);
+      console.error(`Erro ao otimizar ${imageConfig.path}:`, error.message);
     }
   }
 }
