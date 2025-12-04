@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const images = [
   { path: 'src/assets/header1.webp', quality: 80 },
-  { path: 'src/assets/lurdinha2.webp', quality: 40 },
+  { path: 'src/assets/lurdinha2.webp', quality: 30 },
   { path: 'src/assets/metricas.webp', quality: 80 },
   { path: 'src/assets/bgjpg.webp', quality: 80 }
 ];

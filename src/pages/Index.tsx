@@ -8,6 +8,7 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import LazyYouTube from "@/components/LazyYouTube";
 import Preconnect from "@/components/Preconnect";
+import CriticalCSS from "@/components/CriticalCSS";
 import header1Img from "@/assets/header1.webp";
 import lurdinha2 from "@/assets/lurdinha2.webp";
 import metricasImg from "@/assets/metricas.webp";
@@ -80,6 +81,7 @@ const Index = () => {
     });
   };
   return <div className="min-h-screen bg-background text-foreground relative">
+      <CriticalCSS />
       <Preconnect />
       <div className="absolute inset-0 w-full h-full">
         <img 
