@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ContainerScroll } from "@/components/ui/container-scroll";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import LazyYouTube from "@/components/LazyYouTube";
 import header1Img from "@/assets/header1.webp";
 import lurdinha2 from "@/assets/lurdinha2.webp";
 import metricasImg from "@/assets/metricas.webp";
@@ -218,18 +219,11 @@ const Index = () => {
       {/* YouTube Video Section */}
       <section className="py-8 md:py-12 px-4 relative z-50">
         <div className="container mx-auto max-w-5xl">
-          <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl relative z-50">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/JRJUp__RkiE"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="w-full h-full relative z-50"
-            />
-          </div>
+          <LazyYouTube 
+            videoId="JRJUp__RkiE" 
+            title="YouTube video player"
+            className="w-full rounded-lg shadow-2xl relative z-50"
+          />
         </div>
       </section>
 
