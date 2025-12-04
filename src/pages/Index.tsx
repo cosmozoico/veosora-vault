@@ -8,8 +8,8 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import header1Img from "@/assets/header1.webp";
 import lurdinha2 from "@/assets/lurdinha2.webp";
-import metricasImg from "@/assets/metricas.jpg";
-import bgJpg from "@/assets/bgjpg.jpg";
+import metricasImg from "@/assets/metricas.webp";
+import bgJpg from "@/assets/bgjpg.webp";
 
 const BentoGrid = ({
   children,
