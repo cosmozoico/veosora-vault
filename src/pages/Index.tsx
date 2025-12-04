@@ -83,6 +83,9 @@ const Index = () => {
           src={bgJpg} 
           alt="Background" 
           className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          loading="lazy"
         />
       </div>
       <div className="relative z-10">
@@ -95,6 +98,9 @@ const Index = () => {
               src={header1Img} 
               alt="Métricas de visualizações - 146.244.155 visualizações" 
               className="w-full h-full object-cover object-right-top" 
+              width={1920}
+              height={1080}
+              fetchPriority="high"
             />
           </div>
 
@@ -271,6 +277,9 @@ const Index = () => {
                 src={lurdinha2} 
                 alt="Lurdinha" 
                 className="absolute inset-0 w-full h-full object-cover scale-350 top-40"
+                width={800}
+                height={600}
+                loading="lazy"
               />
               {/* Side Gradient Overlay */}
               <div className="absolute inset-0 pointer-events-none">
@@ -291,6 +300,9 @@ const Index = () => {
                 src={lurdinha2} 
                 alt="Lurdinha" 
                 className="absolute inset-0 w-full h-full object-contain scale-150"
+                width={800}
+                height={600}
+                loading="lazy"
               />
             </div>
           </div>
@@ -388,6 +400,9 @@ const Index = () => {
                 src={metricasImg} 
                 alt="Criadores de conteúdo digital com IA" 
                 className="w-full h-auto object-cover rounded-lg shadow-2xl"
+                width={553}
+                height={460}
+                loading="lazy"
               />
             </div>
           </div>
