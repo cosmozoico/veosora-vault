@@ -108,7 +108,7 @@ const Index = () => {
               fetchPriority="high"
             />
             {/* Gradient overlay to blend with background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 via-20% to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent via-10% to-transparent"></div>
           </div>
 
           {/* Mobile Hero Text Overlay */}
