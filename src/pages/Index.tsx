@@ -98,7 +98,7 @@ const Index = () => {
       <section className="relative overflow-x-clip">
         <div className="relative min-h-[600px] md:min-h-[700px] flex items-center">
           {/* Background Image - Right Top Corner */}
-          <div className="absolute top-0 right-0 w-full h-full">
+          <div className="absolute top-0 right-0 w-[120%] md:w-2/3 h-full">
             <img 
               src={header1Img} 
               alt="Métricas de visualizações - 146.244.155 visualizações" 
