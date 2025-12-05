@@ -133,7 +133,7 @@ const CriticalCSS = () => {
     linkElement.rel = 'preload';
     (linkElement as any).as = 'style';
     linkElement.onload = function() {
-      this.rel = 'stylesheet';
+      linkElement.rel = 'stylesheet';
     };
     linkElement.href = '/assets/index-DJpgLB-c.css';
     document.head.appendChild(linkElement);
