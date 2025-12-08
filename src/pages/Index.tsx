@@ -124,7 +124,7 @@ const Index = () => {
                 <InteractiveHoverButton 
                   text="Começar Agora" 
                   className="bg-gradient-to-r from-[#ba15c5] to-[#4586ff] text-white px-6 py-2 shadow-lg border-transparent hover:from-[#1afb65] hover:to-[#0dd0c6] hover:text-white w-full text-sm transition-all duration-300" style={{ boxShadow: '0 0 20px rgba(186, 21, 197, 0.5)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(26, 251, 101, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(186, 21, 197, 0.5)'}
-                  onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}
+                  onClick={() => window.location.href = 'https://pay.kirvano.com/83766939-a66b-4207-b5de-7b65961e4b3d'}
                 />
               </div>
             </div>
@@ -161,7 +161,7 @@ const Index = () => {
                 <InteractiveHoverButton 
                   text="Começar Agora" 
                   className="bg-gradient-to-r from-[#ba15c5] to-[#4586ff] text-white px-8 shadow-lg border-transparent hover:from-[#1afb65] hover:to-[#0dd0c6] hover:text-white w-auto min-w-40 flex justify-center transition-all duration-300" style={{ boxShadow: '0 0 20px rgba(186, 21, 197, 0.5)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(26, 251, 101, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(186, 21, 197, 0.5)'}
-                  onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}
+                  onClick={() => window.location.href = 'https://pay.kirvano.com/83766939-a66b-4207-b5de-7b65961e4b3d'}
                 />
                 <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black rounded-full" onClick={scrollToCTA}>
                   Ver Mais
@@ -477,7 +477,7 @@ const Index = () => {
               <InteractiveHoverButton 
                 text="COMPRAR AGORA" 
                 className="bg-gradient-to-r from-[#ba15c5] to-[#4586ff] text-white py-4 shadow-lg text-lg font-bold border-transparent hover:from-[#1afb65] hover:to-[#0dd0c6] hover:text-white w-full transition-all duration-300" style={{ boxShadow: '0 0 20px rgba(186, 21, 197, 0.5)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(26, 251, 101, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(186, 21, 197, 0.5)'}
-                onClick={() => window.location.href = 'https://pay.kirvano.com/e6d73d44-a8cc-4539-b24a-4bb7e688c42e'}
+                onClick={() => window.location.href = 'https://pay.kirvano.com/83766939-a66b-4207-b5de-7b65961e4b3d'}
               />
 
               <div className="flex items-center justify-center gap-2 text-xs text-gray-400 mt-6">
