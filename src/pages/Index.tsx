@@ -54,7 +54,9 @@ const BentoCard = ({
     <div className="absolute inset-0" style={{ backgroundColor: '#0F1114', zIndex: 1 }}></div>
     <div style={{ position: 'relative', zIndex: 2 }}>{background}</div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10" style={{ position: 'relative', zIndex: 3 }}>
-      <Icon className="h-12 w-12 origin-left transform-gpu text-white transition-all duration-300 ease-in-out group-hover:scale-75" />
+      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#ba15c5] to-[#4586ff] flex items-center justify-center mb-2">
+        <Icon className="h-8 w-8 origin-left transform-gpu text-white transition-all duration-300 ease-in-out group-hover:scale-90" />
+      </div>
       <h3 className="text-xl font-semibold text-white">
         {name}
       </h3>
@@ -105,6 +107,8 @@ const Index = () => {
               height={1080}
               fetchPriority="high"
             />
+            {/* Gradient overlay to blend with background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent via-10% to-transparent"></div>
           </div>
 
           {/* Mobile Hero Text Overlay */}
