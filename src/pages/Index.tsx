@@ -124,7 +124,7 @@ const Index = () => {
                 <InteractiveHoverButton 
                   text="Começar Agora" 
                   className="bg-gradient-to-r from-[#ba15c5] to-[#4586ff] text-white px-6 py-2 shadow-lg border-transparent hover:from-[#1afb65] hover:to-[#0dd0c6] hover:text-white w-full text-sm transition-all duration-300" style={{ boxShadow: '0 0 20px rgba(186, 21, 197, 0.5)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(26, 251, 101, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(186, 21, 197, 0.5)'}
-                  onClick={() => window.location.href = 'https://pay.kirvano.com/b8cbe4db-56ad-4667-9229-3c13e61420a0'}
+                  onClick={() => window.location.href = 'https://pay.kirvano.com/8be4fa68-be50-4781-bc6d-493cdd43c569'}
                 />
               </div>
             </div>
@@ -161,7 +161,7 @@ const Index = () => {
                 <InteractiveHoverButton 
                   text="Começar Agora" 
                   className="bg-gradient-to-r from-[#ba15c5] to-[#4586ff] text-white px-8 shadow-lg border-transparent hover:from-[#1afb65] hover:to-[#0dd0c6] hover:text-white w-auto min-w-40 flex justify-center transition-all duration-300" style={{ boxShadow: '0 0 20px rgba(186, 21, 197, 0.5)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(26, 251, 101, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(186, 21, 197, 0.5)'}
-                  onClick={() => window.location.href = 'https://pay.kirvano.com/b8cbe4db-56ad-4667-9229-3c13e61420a0'}
+                  onClick={() => window.location.href = 'https://pay.kirvano.com/8be4fa68-be50-4781-bc6d-493cdd43c569'}
                 />
                 <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black rounded-full" onClick={scrollToCTA}>
                   Ver Mais
@@ -431,10 +431,9 @@ const Index = () => {
                   VAGAS LIMITADAS
                 </Badge>
                 <div className="text-purple-400 text-sm mb-1">De <span className="line-through">R$ 239,80</span> por</div>
-                <div className="flex items-baseline justify-center gap-2">
-                  <span className="text-5xl md:text-6xl font-bold text-white">R$ 119,90</span>
-                </div>
-                <div className="text-purple-400 text-sm font-bold mt-2">10% de desconto no Pix</div>
+                <div className="text-gray-400 text-sm mb-2">12x de</div>
+                <div className="text-5xl md:text-6xl font-bold text-white mb-2">R$ 12,89</div>
+                <div className="text-gray-400 text-sm font-bold">ou R$ 125,85 a vista</div>
               </div>
 
               <div className="mb-6 text-white text-sm font-bold bg-gray-700 rounded-full px-6 py-2 text-center mx-auto w-fit">
@@ -477,7 +476,7 @@ const Index = () => {
               <InteractiveHoverButton 
                 text="COMPRAR AGORA" 
                 className="bg-gradient-to-r from-[#ba15c5] to-[#4586ff] text-white py-4 shadow-lg text-lg font-bold border-transparent hover:from-[#1afb65] hover:to-[#0dd0c6] hover:text-white w-full transition-all duration-300" style={{ boxShadow: '0 0 20px rgba(186, 21, 197, 0.5)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(26, 251, 101, 0.5)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 20px rgba(186, 21, 197, 0.5)'}
-                onClick={() => window.location.href = 'https://pay.kirvano.com/b8cbe4db-56ad-4667-9229-3c13e61420a0'}
+                onClick={() => window.location.href = 'https://pay.kirvano.com/8be4fa68-be50-4781-bc6d-493cdd43c569'}
               />
 
               <div className="flex items-center justify-center gap-2 text-xs text-gray-400 mt-6">
