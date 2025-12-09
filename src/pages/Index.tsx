@@ -431,10 +431,11 @@ const Index = () => {
                   VAGAS LIMITADAS
                 </Badge>
                 <div className="text-purple-400 text-sm mb-1">De <span className="line-through">R$ 239,80</span> por</div>
+                <div className="text-purple-400 text-sm mb-1">12x de</div>
                 <div className="flex items-baseline justify-center gap-2">
-                  <span className="text-5xl md:text-6xl font-bold text-white">R$ 119,90</span>
+                  <span className="text-5xl md:text-6xl font-bold text-white">R$ 12,89</span>
                 </div>
-                <div className="text-purple-400 text-sm font-bold mt-2">10% de desconto no Pix</div>
+                <div className="text-gray-400 text-sm mt-2">ou R$ 125,85 a vista</div>
               </div>
 
               <div className="mb-6 text-white text-sm font-bold bg-gray-700 rounded-full px-6 py-2 text-center mx-auto w-fit">
