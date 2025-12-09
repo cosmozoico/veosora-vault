@@ -226,7 +226,7 @@ const Index = () => {
       <section className="py-8 md:py-12 px-4 relative z-50">
         <div className="container mx-auto max-w-5xl">
           <LazyYouTube 
-            videoId="JRJUp__RkiE" 
+            videoId="tWvFNtJoG1Y" 
             title="YouTube video player"
             className="w-full rounded-lg shadow-2xl relative z-50"
           />
