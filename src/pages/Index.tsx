@@ -463,6 +463,12 @@ const Index = () => {
                   <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-[#0F1114]" />
                   </div>
+                  <span className="text-gray-300">Grupo exclusivo de networking</span>
+                </div>
+                <div className="flex items-center gap-3 text-white">
+                  <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-[#0F1114]" />
+                  </div>
                   <span className="text-gray-300">Acesso Vitalício</span>
                 </div>
               </div>
