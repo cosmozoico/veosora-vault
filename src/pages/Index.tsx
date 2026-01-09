@@ -317,7 +317,7 @@ const Index = () => {
               O que você vai aprender
             </h2>
             <p className="text-muted-foreground">
-              10 E-books completos do básico ao avançado
+              Vídeo Aulas + Material de estudo do básico ao avançado
             </p>
           </div>
 
@@ -445,7 +445,7 @@ const Index = () => {
                   <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-[#0F1114]" />
                   </div>
-                  <span className="text-gray-300">10 E-books Completos</span>
+                  <span className="text-gray-300">Vídeo Aulas + Material de Estudo</span>
                 </div>
                 <div className="flex items-center gap-3 text-white">
                   <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
