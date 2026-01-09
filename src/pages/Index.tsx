@@ -430,7 +430,13 @@ const Index = () => {
                   <Star className="w-4 h-4 mr-1 fill-purple-400" />
                   VAGAS LIMITADAS
                 </Badge>
-                <div className="text-purple-400 text-base font-bold mb-1">De <span className="line-through decoration-red-500 decoration-2">R$ 589,90</span> por</div>
+                <div className="text-purple-400 text-base font-bold mb-1">De <span className="relative inline-block">
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <span className="absolute w-full h-[1px] bg-red-500 rotate-12"></span>
+                    <span className="absolute w-full h-[1px] bg-red-500 -rotate-12"></span>
+                  </span>
+                  R$ 589,90
+                </span> por</div>
                 <div className="text-gray-400 text-base font-bold mb-2">12 x de</div>
                 <div className="text-5xl md:text-6xl font-bold text-white mb-2">R$ 12,40</div>
                 <div className="text-gray-400 text-sm font-bold">Ou R$ 119,90 à vista</div>
