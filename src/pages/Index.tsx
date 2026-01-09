@@ -525,7 +525,7 @@ const Index = () => {
                 Como terei acesso ao material?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Imediatamente após a compra, você receberá um email com acesso à área de membros onde estão todos os e-books e materiais complementares. O acesso é vitalício. Além disso, você também receberá atualizações periódicas com novos conteúdos e recursos para ajudá-lo a melhorar suas habilidades.
+                Imediatamente após a compra, você receberá um email com acesso à área de membros onde estão todas as vídeo aulas e materiais complementares de estudo. O acesso é vitalício. Além disso, você também receberá atualizações periódicas com novos conteúdos e recursos para ajudá-lo a melhorar suas habilidades.
               </AccordionContent>
             </AccordionItem>
 
