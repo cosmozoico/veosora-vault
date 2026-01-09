@@ -432,8 +432,8 @@ const Index = () => {
                 </Badge>
                 <div className="text-purple-400 text-base font-bold mb-1">De <span className="relative inline-block">
                   <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="absolute w-full h-[1px] bg-red-500 rotate-12"></span>
-                    <span className="absolute w-full h-[1px] bg-red-500 -rotate-12"></span>
+                    <span className="absolute w-full h-[2px] bg-red-500 rotate-12"></span>
+                    <span className="absolute w-full h-[2px] bg-red-500 -rotate-12"></span>
                   </span>
                   R$ 589,90
                 </span> por</div>
