@@ -266,8 +266,8 @@ const Index = () => {
                 <div className="flex items-start gap-3">
                   <Sparkles className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <div className="font-semibold">Veo 3 e Sora 2</div>
-                    <div className="text-sm text-muted-foreground">Domine as IAs mais avançadas</div>
+                    <div className="font-semibold">Veo 3.1, Gemini Omni e Seedance 2</div>
+                    <div className="text-sm text-muted-foreground">Domine as IAs mais avançadas do mundo</div>
                   </div>
                 </div>
               </div>
@@ -317,7 +317,7 @@ const Index = () => {
               O que você vai aprender
             </h2>
             <p className="text-muted-foreground">
-              Vídeo Aulas + Material de estudo do básico ao avançado
+              Mentoria Estratégica + Material de estudo do básico ao avançado
             </p>
           </div>
 
