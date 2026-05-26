@@ -118,7 +118,7 @@ const Index = () => {
                 Aprenda a criar vídeos <span className="text-[#BB33FF]">virais</span> com IA e ganhe em <span className="text-[#BB33FF]">dólar</span> $
               </h1>
               <p className="text-sm text-muted-foreground text-white mb-4">
-                Aprenda a criar vídeos ultra-realistas com as IAs mais avançadas do mercado. A mesma estratégia que gerou <span className="font-semibold text-yellow-400">168 milhões de visualizações</span>.
+                Tenha o meu acompanhamento direcionado e o método exato que gerou mais de <span className="font-semibold text-yellow-400">188 milhões de visualizações</span> para dominar as ferramentas mais avançadas do mercado.
               </p>
               <div className="flex flex-col gap-3 mb-4">
                 <InteractiveHoverButton 
@@ -154,7 +154,7 @@ const Index = () => {
               </div>
               
               <p className="text-base md:text-lg text-muted-foreground mb-6">
-                Aprenda a criar vídeos ultra-realistas com as IAs mais avançadas do mercado. A mesma estratégia que gerou <span className="font-semibold text-white">168 milhões de visualizações</span>.
+                Tenha o meu acompanhamento direcionado e o método exato que gerou mais de <span className="font-semibold text-white">188 milhões de visualizações</span> para dominar as ferramentas mais avançadas do mercado.
               </p>
 
               <div className="flex gap-3 mb-8">
@@ -246,7 +246,7 @@ const Index = () => {
                 <span style={{ color: '#BB33FF' }}>168 Milhões</span> de Visualizações no <span style={{ color: '#BB33FF' }}>Instagram</span> em um único vídeo!
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Todo o conhecimento do perfil <a href="https://www.instagram.com/vlogsensato/" target="_blank" rel="noopener noreferrer" className="font-bold hover:underline" style={{ color: '#F0D91E' }}>@vlogsensato</a> que conquistou resultados extraordinários criando vídeos com IA está neste guia completo.
+                Na Mentoria Vlog Viral você terá acesso a todo o conhecimento do perfil <a href="https://www.instagram.com/vlogsensato/" target="_blank" rel="noopener noreferrer" className="font-bold hover:underline" style={{ color: '#F0D91E' }}>@vlogsensato</a> que conquistou resultados extraordinários criando vídeos com IA. Quem depende de sorte fica para trás. Você não recebe apenas um compilado de aulas gravadas! você ganha um plano de ação estratégico, análise do seu conteúdo e caso seja iniciante pegamos na sua mão e te guiamos do zero ao avançado.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -291,7 +291,7 @@ const Index = () => {
                   <span style={{ color: '#BB33FF' }}>168 Milhões</span> de Visualizações no <span style={{ color: '#BB33FF' }}>Instagram</span>
                 </h2>
                 <p className="text-sm text-white mb-4">
-                  Todo o conhecimento do perfil <a href="https://www.instagram.com/vlogsensato/" target="_blank" rel="noopener noreferrer" className="font-bold hover:underline" style={{ color: '#F0D91E' }}>@vlogsensato</a> que conquistou resultados extraordinários criando vídeos com IA está neste guia completo.
+                  Na Mentoria Vlog Viral você terá acesso a todo o conhecimento do perfil <a href="https://www.instagram.com/vlogsensato/" target="_blank" rel="noopener noreferrer" className="font-bold hover:underline" style={{ color: '#F0D91E' }}>@vlogsensato</a>. Você não recebe apenas aulas gravadas! ganha um plano de ação estratégico, análise do seu conteúdo e te guiamos do zero ao avançado.
                 </p>
               </div>
             </div>
@@ -323,56 +323,56 @@ const Index = () => {
 
           <BentoGrid className="max-w-6xl mx-auto">
             <BentoCard
-              name="Fundamentos de Vídeos com IA"
+              name="Estratégia de Viralização Direcionada"
               className="col-span-3 md:col-span-1"
               background={<div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 opacity-10"></div>}
-              Icon={BookOpen}
-              description="Aprenda os conceitos básicos de criação de vídeos com inteligência artificial do zero."
+              Icon={TrendingUp}
+              description="Análise de métricas, hook, retenção e o passo a passo estratégico para estruturar canais focados em alto número de visualizações."
               href="#cta-section"
               cta="Aprender mais"
             />
             <BentoCard
-              name="Prompts Avançados para Veo 3"
+              name="Mastery em IA (Aulas Avançadas)"
               className="col-span-3 md:col-span-1"
               background={<div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 opacity-10"></div>}
               Icon={Zap}
-              description="Domine os prompts mais avançados para extrair o máximo do Veo 3."
+              description="Direcionamento prático para dominar ferramentas de ponta como Veo 3 e Seedance 2, criando narrativas ultra-realistas."
               href="#cta-section"
               cta="Aprender mais"
             />
             <BentoCard
-              name="Domínio Completo do Sora 2"
+              name="Consistência de Personagem Impecável"
               className="col-span-3 md:col-span-1"
               background={<div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-indigo-800 opacity-10"></div>}
-              Icon={Brain}
-              description="Torne-se mestre na ferramenta mais poderosa de criação de vídeos com IA."
+              Icon={Target}
+              description="O segredo técnico e prático para manter a identidade visual e o realismo dos seus personagens em qualquer cenário."
               href="#cta-section"
               cta="Aprender mais"
             />
             <BentoCard
-              name="Consistência de Personagem (Exclusivo)"
+              name="Monetização e Escala de Negócio"
               className="col-span-3 md:col-span-1"
               background={<div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 opacity-10"></div>}
-              Icon={Target}
-              description="Técnica exclusiva para manter personagens consistentes em todos os vídeos."
+              Icon={DollarSign}
+              description="Como transformar visualizações em faturamento real, fechar parcerias e estruturar sua operação para ganhar em dólar."
               href="#cta-section"
               cta="Aprender mais"
             />
             <BentoCard
-              name="Templates de Prompts Prontos"
+              name="BÔNUS: Acesso ao Curso Completo"
               className="col-span-3 md:col-span-1"
               background={<div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-indigo-800 opacity-10"></div>}
-              Icon={FileText}
-              description="Coleção de templates prontos para usar imediatamente em seus projetos."
+              Icon={BookOpen}
+              description="Como material extra, você recebe o passo a passo em vídeo das ferramentas para consultar e dominar o clique a clique sempre que precisar."
               href="#cta-section"
               cta="Aprender mais"
             />
             <BentoCard
-              name="Monetização de Conteúdo"
+              name="Templates e Prompts Prontos"
               className="col-span-3 md:col-span-1"
               background={<div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 opacity-10"></div>}
-              Icon={DollarSign}
-              description="Transforme seus vídeos em fontes de renda com estratégias comprovadas."
+              Icon={FileText}
+              description="Sua biblioteca pessoal de engenharia de prompt atualizada para acelerar seu fluxo de pós-produção e criação."
               href="#cta-section"
               cta="Aprender mais"
             />
@@ -419,7 +419,7 @@ const Index = () => {
                 Garanta sua vaga hoje
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Oferta por tempo limitado. Aprenda a criar vídeos ultra-realistas com IA e domine as técnicas que geraram 168 milhões de visualizações.
+                Muito mais que um treinamento, este é o ambiente ideal para quem quer parar de amadorismo e profissionalizar sua criação de conteúdo com IA. Você terá o direcionamento estratégico necessário para o seu perfil, além de levar todo o ecossistema de aulas gravadas de bônus.
               </p>
             </div>
             
@@ -451,31 +451,25 @@ const Index = () => {
                   <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-[#0F1114]" />
                   </div>
-                  <span className="text-gray-300">Vídeo Aulas + Material de Estudo</span>
+                  <span className="text-gray-300">Mentoria Estratégica + Direcionamento</span>
                 </div>
                 <div className="flex items-center gap-3 text-white">
                   <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-[#0F1114]" />
                   </div>
-                  <span className="text-gray-300">Estratégia dos 168M de Views</span>
+                  <span className="text-gray-300">Acesso Imediato ao Curso Completo (Material Extra)</span>
                 </div>
                 <div className="flex items-center gap-3 text-white">
                   <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-[#0F1114]" />
                   </div>
-                  <span className="text-gray-300">Técnica Exclusiva de Consistência</span>
+                  <span className="text-gray-300">Estratégia dos 188M de Views</span>
                 </div>
                 <div className="flex items-center gap-3 text-white">
                   <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-[#0F1114]" />
                   </div>
                   <span className="text-gray-300">Grupo Exclusivo de Networking</span>
-                </div>
-                <div className="flex items-center gap-3 text-white">
-                  <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-[#0F1114]" />
-                  </div>
-                  <span className="text-gray-300">Acesso Vitalício</span>
                 </div>
               </div>
 
@@ -510,10 +504,10 @@ const Index = () => {
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="item-1" className="border border-border rounded-lg px-6 bg-card">
               <AccordionTrigger className="text-left hover:no-underline">
-                O que são Veo 3 e Sora 2?
+                Quais IAs vou aprender?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Veo 3 e Sora 2 são as mais avançadas inteligências artificiais para criação de vídeos ultra-realistas. Neste guia, você aprenderá a dominar ambas as ferramentas do zero ao avançado.
+                Veo 3, Gemini Omni e Seedance 2 e qualquer outra que seja necessária para o seu nicho, na mentoria, você aprenderá a dominar as principais as ferramentas do zero ao avançado.
               </AccordionContent>
             </AccordionItem>
 
@@ -522,7 +516,7 @@ const Index = () => {
                 Preciso ter experiência prévia?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Não! O guia começa do absoluto básico e te leva até técnicas avançadas. Mesmo que você nunca tenha criado um vídeo, conseguirá acompanhar e aplicar.
+                Não! Te guiamos do absoluto zero e te levamos até técnicas avançadas. Mesmo que você nunca tenha criado um vídeo, conseguirá acompanhar e aplicar.
               </AccordionContent>
             </AccordionItem>
 
@@ -531,17 +525,16 @@ const Index = () => {
                 Como terei acesso ao material?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Imediatamente após a compra, você receberá um email com acesso à área de membros onde estão todas as vídeo aulas e materiais complementares de estudo. O acesso é vitalício. Além disso, você também receberá atualizações periódicas com novos conteúdos e recursos para ajudá-lo a melhorar suas habilidades.
+                Imediatamente após a compra, você receberá um email com acesso à área de membros onde estão todas as vídeo aulas e materiais complementares de estudo. Além disso, você também receberá o link do grupo fechado no WhatsApp onde tiramos dúvidas, conversamos sobre as novidades no mundo das IAs e divulgamos link e horários das mentorias em grupo.
               </AccordionContent>
             </AccordionItem>
 
-            
             <AccordionItem value="item-5" className="border border-border rounded-lg px-6 bg-card">
               <AccordionTrigger className="text-left hover:no-underline">
                 Consigo ganhar dinheiro com inteligência artificial?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Sim é possível ganhar dinheiro com IA, seja com monetização do tiktok, youtube, fazendo parcerias pagas e publicidades para empresas no instagram, ou até mesmo prestando serviços de criação de vídeos personalizados.
+                Sim é possível ganhar dinheiro com IA, seja com monetização do tiktok, youtube e facebook, fazendo parcerias pagas e publicidades para empresas no instagram, ou até mesmo prestando serviços de criação de vídeos personalizados.
               </AccordionContent>
             </AccordionItem>
 
@@ -551,6 +544,24 @@ const Index = () => {
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Sim! Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, devolvemos 100% do seu dinheiro.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7" className="border border-border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-left hover:no-underline">
+                Por quanto tempo terei o acompanhamento da mentoria?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Você terá 4 meses de suporte e direcionamento por call. Esse é o tempo exato e validado para você sair do absoluto zero, dominar as ferramentas de IA, criar seu conteúdo e começar a crescer suas redes sociais de forma profissional. É um formato focado em te fazer ter resultados rápidos, sem enrolação. Mas tenha em mente que continuaremos dando suporte por texto no grupo fechado por tempo indeterminado.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-8" className="border border-border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-left hover:no-underline">
+                O acesso ao material gravado é vitalício?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Não, você terá 1 ano (12 meses) de acesso garantido a todo o curso em vídeo e materiais extras. Isso significa que mesmo após o fim dos 4 meses de suporte direto da mentoria, você ainda terá bastante tempo para rever as aulas técnicas, e atualizar seus fluxos de trabalho sempre que precisar.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
